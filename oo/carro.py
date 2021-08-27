@@ -6,7 +6,7 @@
 
 O Motor terá a responsabilidade de controlar a velocidade.
 Ele oferece os seguintes atributos:
-1) Atributo de dade velocidade
+1) Atributo de dado velocidade
 2) Método acelerar, que deverá incrementar a velocidade de uma unidade
 3) Método frear que deverá decrementar a velocidade em duas unidades
 
