@@ -80,16 +80,16 @@ O       L
     >>> carro.calcular_velocidade()
     0
     >>> carro.calcular_direcao()
-    >>>'Norte'
+    'Norte'
     >>> carro.girar_a_direita()
     >>> carro.calcular_direcao()
-    >>>'Leste'
+    'Leste'
     >>> carro.girar_a_esquerda()
     >>> carro.calcular_direcao()
-    >>>'Norte'
+    'Norte'
     >>> carro.girar_a_esquerda()
     >>> carro.calcular_direcao()
-    >>>'Oeste'
+    'Oeste'
 """
 
 class Motor:
@@ -97,3 +97,9 @@ class Motor:
         self.velocidade = 0
     def acelerar(self):
         self.velocidade +=1
+    def frear(self):
+        self.velocidade -=2
+        self.velocidade = max(0, self.velocidade)
+
+class Direcao:
+    def
