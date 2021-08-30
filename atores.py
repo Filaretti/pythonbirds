@@ -106,8 +106,8 @@ class Passaro(Ator):
         o status dos Passaro deve ser alterado para destruido, bem como o seu caracter
 
         """
-        if self.y<=0
-            self.status= DESTRUIDO
+        if self.y <= 0:
+            self.status = DESTRUIDO
 
     def calcular_posicao(self, tempo):
         """
@@ -124,9 +124,9 @@ class Passaro(Ator):
         :return: posição x, y
         """
         if self._esta_voando():
-        delta_t= tempo-self._tempo_de_lancamento
-        self._calcular_posicao_vertical(delta_t)
-        self._calcular_posicao_horizontal(delta_t)
+            delta_t = tempo - self._tempo_de_lancamento
+            self._calcular_posicao_vertical(delta_t)
+            self._calcular_posicao_horizontal(delta_t)
         return super().calcular_posicao(tempo)
 
 
@@ -140,14 +140,14 @@ class Passaro(Ator):
         :return:
         """
         self._angulo_de_lancamento = math.radians(angulo)
-        Self._tempo_de_lancamento = tempo_de_lancamento
+        self._tempo_de_lancamento = tempo_de_lancamento
 
     def calcular_posicao_verticaL(self, delta_t):
         y_atual = self._y_inicial
-        angulo_radianos=self._angulo_de_lancamento
+        angulo_radianos = self._angulo_de_lancamento
         y_atual += self.velocidade_escalar*delta_t*math.sin(angulo_radianos)
         Y_atual -=(GRAVIDADE * (delta_t **2))/2
-        self.y=y_atual
+        self.y = y_atual
 
     def _calcular_posicao_horizontal(self, delta_t):
         x_atual=self._x_inicial
