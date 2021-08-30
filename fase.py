@@ -74,10 +74,11 @@ class Fase():
         :return:
         """
         if not self._possui_porco_ativo():
-        return VITORIA
+            return VITORIA
         elif self._possui_passaros_ativo():
-        return EM_ANDAMENTO
-        else DERROTA
+            return EM_ANDAMENTO
+        else:
+            return DERROTA
 
     def lancar(self, angulo, tempo):
         """
